@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>随机点名</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>随机点名小工具</h1>
+
+<!-- 点名区 -->
+<div>
+  <div id="showName">准备就绪</div>
+  抽取人数：<input type="number" id="pickCount" value="1" min="1">
+  <button onclick="start()">开始</button>
+  <button onclick="stop()">停止</button>
+</div>
+
+<!-- 名单区 -->
+<div>
+  <h3>名单管理</h3>
+  <input type="text" id="nameInput" placeholder="输入姓名">
+  <button onclick="addName()">添加</button>
+  <button onclick="clearAll()">清空</button>
+  <br><br>
+  批量添加（每行一个）：<br>
+  <textarea id="batchInput"></textarea>
+  <br>
+  <button onclick="batchAdd()">批量导入</button>
+  <div id="nameList"></div>
+  <div id="countText">共 0 人</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
