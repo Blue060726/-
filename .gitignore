@@ -1,0 +1,8 @@
+﻿node_modules/
+dist/
+.vscode/
+*.log
+.DS_Store
+script_v1.js
+script_v2.js
+script_final.js
