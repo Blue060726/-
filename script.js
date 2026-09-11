@@ -1,7 +1,6 @@
 var names = [];
 var timer = null;
 
-// 添加名字
 function addName() {
   var input = document.getElementById("nameInput");
   var name = input.value.trim();
@@ -12,7 +11,6 @@ function addName() {
   showList();
 }
 
-// 批量添加
 function batchAdd() {
   var text = document.getElementById("batchInput").value.trim();
   if (text === "") { alert("请先输入名字！"); return; }
@@ -30,7 +28,6 @@ function batchAdd() {
   showList();
 }
 
-// 清空名单
 function clearAll() {
   if (confirm("确定清空全部名单吗？")) {
     names = [];
@@ -38,7 +35,6 @@ function clearAll() {
   }
 }
 
-// 显示名单
 function showList() {
   var listDiv = document.getElementById("nameList");
   listDiv.innerHTML = "";
@@ -51,7 +47,6 @@ function showList() {
   document.getElementById("countText").textContent = "共 " + names.length + " 人";
 }
 
-// 开始点名
 function start() {
   if (names.length === 0) { alert("名单是空的！"); return; }
   var pickCount = parseInt(document.getElementById("pickCount").value);
@@ -63,7 +58,6 @@ function start() {
   }, 60);
 }
 
-// 停止
 function stop() {
   clearInterval(timer);
   timer = null;
